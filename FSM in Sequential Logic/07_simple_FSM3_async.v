@@ -16,10 +16,10 @@ module top_module(
     
     always @(posedge clk or posedge areset) begin
         if(areset) begin
-        	c_state <= A ;
+            c_state <= A ;
         end
         else begin
-        	c_state <= n_state ;
+            c_state <= n_state ;
         end
     end
     
@@ -34,13 +34,13 @@ module top_module(
     
     always @(posedge clk or posedge areset) begin
         if(areset) begin
-        	r_out <= 0 ;
+            r_out <= 0 ;
         end
         else begin
             case(n_state)
-        		D : r_out <= 1 ;
+        	D : r_out <= 1 ;
             	default : r_out <= 0 ;
-        	endcase
+            endcase
         end
     end
 

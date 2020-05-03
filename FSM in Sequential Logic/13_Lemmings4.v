@@ -18,7 +18,7 @@ module top_module(
     
     always @(posedge clk or posedge areset) begin
         if(areset) begin
-        	cnt <= 0 ;
+            cnt <= 0 ;
             cnt_end <= 0 ;
         end
         else begin
@@ -27,7 +27,7 @@ module top_module(
                     cnt_end <= 1 ;
                 end
                 else begin
-                	cnt <= cnt + 1 ;
+                    cnt <= cnt + 1 ;
                	end
             end
             else begin
@@ -38,10 +38,10 @@ module top_module(
     
     always @(posedge clk or posedge areset) begin
         if(areset) begin
-        	cstate <= LEFT ;
+            cstate <= LEFT ;
         end
         else begin
-        	cstate <= nstate ;
+            cstate <= nstate ;
         end
     end
     

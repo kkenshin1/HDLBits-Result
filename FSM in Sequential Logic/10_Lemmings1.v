@@ -20,10 +20,10 @@ module top_module(
     always @(posedge clk, posedge areset) begin
         // State flip-flops with asynchronous reset
         if(areset) begin
-        	state <= LEFT ;
+            state <= LEFT ;
         end
         else begin
-        	state <= next_state ;
+            state <= next_state ;
         end
     end
 

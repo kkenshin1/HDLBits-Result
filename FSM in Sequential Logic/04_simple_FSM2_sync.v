@@ -11,7 +11,7 @@ module top_module(
     always @(*) begin
         // State transition logic
         case(state)
-        	OFF : next_state = j ? ON : OFF ;
+            OFF : next_state = j ? ON : OFF ;
             ON  : next_state = k ? OFF : ON ;
         endcase
     end
@@ -19,10 +19,10 @@ module top_module(
     always @(posedge clk) begin
         // State flip-flops with synchronous reset
         if(reset) begin
-        	state <= OFF ;
+            state <= OFF ;
         end
         else begin
-        	state <= next_state ;
+            state <= next_state ;
         end
     end
 

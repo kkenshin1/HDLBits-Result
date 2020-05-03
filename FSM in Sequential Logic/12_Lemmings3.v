@@ -15,10 +15,10 @@ module top_module(
     
     always @(posedge clk or posedge areset) begin
         if(areset) begin
-        	cstate <= LEFT ;
+            cstate <= LEFT ;
         end
         else begin
-        	cstate <= nstate ;
+            cstate <= nstate ;
         end
     end
     

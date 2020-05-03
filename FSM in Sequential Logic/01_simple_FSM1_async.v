@@ -10,7 +10,7 @@ module top_module(
     always @(*) begin    // This is a combinational always block
         // State transition logic
         case(state) 
-        	A : next_state = in ? A : B ;
+	    A : next_state = in ? A : B ;
             B : next_state = in ? B : A ;
         endcase
     end
@@ -18,10 +18,10 @@ module top_module(
     always @(posedge clk, posedge areset) begin    // This is a sequential always block
         // State flip-flops with asynchronous reset
         if(areset) begin
-        	state <= B ;
+            state <= B ;
         end
         else begin
-        	state <= next_state ;
+            state <= next_state ;
         end
         
     end
